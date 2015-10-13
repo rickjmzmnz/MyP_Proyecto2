@@ -15,6 +15,10 @@ public class Conexion {
 
     public static Connection conexion;
 
+    /**
+     * Método para abrir una conexión a la base de datos
+     * @return la conexion abierta
+     */
     public synchronized static Connection abrir() {
         try {
             if (conexion == null || conexion.isClosed()) {
@@ -27,6 +31,9 @@ public class Conexion {
         return conexion;
     }
 
+    /**
+     * Método para cerrar la conexion a la base de datos
+     */
     public synchronized static void cerrar() {
         try {
             if(conexion == null || conexion.isClosed()) {

@@ -16,11 +16,20 @@ public class Marca {
     private int idMarca;
     private String nombreMarca;
     
+    /**
+     * Constructor de la clase Marca
+     * @param idMarca
+     * @param nombreMarca 
+     */
     public Marca(int idMarca,String nombreMarca) {
         idMarca = this.idMarca;
         nombreMarca = this.nombreMarca;
     }
     
+    /**
+     * Método para agregar datos a la tabla marca
+     * @throws SQLException 
+     */
     public synchronized void agregar() throws SQLException {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
