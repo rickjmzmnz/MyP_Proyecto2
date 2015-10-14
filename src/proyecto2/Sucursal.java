@@ -16,7 +16,7 @@ public class Sucursal {
     private int idSucursal;
     private String nombreSucursal;
     private int telefonoSucursal;
-    private float balance;
+    private double balance;
     
     /**
      * Constructor de la clase Sucursal
@@ -25,12 +25,12 @@ public class Sucursal {
      * @param telefonoSucursal
      * @param balance 
      */
-    public Sucursal(int idSucursal,String nombreSucursal,int telefonoSucursal,float balance) {
+    public Sucursal(int idSucursal,String nombreSucursal,int telefonoSucursal,double balance) {
         
-        idSucursal = this.idSucursal;
-        nombreSucursal = this.nombreSucursal;
-        telefonoSucursal = this.telefonoSucursal;
-        balance = this.balance;
+        this.idSucursal = idSucursal;
+        this.nombreSucursal = nombreSucursal;
+        this.telefonoSucursal = telefonoSucursal;
+        this.balance = balance;
         
     }
     
@@ -44,8 +44,21 @@ public class Sucursal {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO sucursal (id_sucursal,nombre_sucursal,telefono_sucursal,balance) "
-                + "VALUES (" + this.idSucursal + "," + this.nombreSucursal + "," + this.telefonoSucursal + "," + this.balance + ");");
+                + "VALUES (" + this.idSucursal + ",'" + this.nombreSucursal + "'," + this.telefonoSucursal + "," + this.balance + ");");
         declaracion.executeLargeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_sucursal = " + this.idSucursal + ");");
+        declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
         Conexion.cerrar();

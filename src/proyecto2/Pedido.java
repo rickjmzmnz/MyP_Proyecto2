@@ -15,10 +15,10 @@ public class Pedido {
     
     private int idPedido;
     private int numeroArticulos;
-    private float total;
+    private double total;
     private int mes;
     private int dia;
-    private int anyo;
+    private int año;
     
     /**
      * Constructor de la clase Pedido
@@ -27,16 +27,16 @@ public class Pedido {
      * @param total
      * @param mes
      * @param dia
-     * @param anyo 
+     * @param año 
      */
-    public Pedido(int idPedido,int numeroArticulos,float total,int mes,int dia,int anyo) {
+    public Pedido(int idPedido,int numeroArticulos,double total,int mes,int dia,int año) {
         
-        idPedido = this.idPedido;
-        numeroArticulos = this.numeroArticulos;
-        total = this.total;
-        mes = this.mes;
-        dia = this.dia;
-        anyo = this.anyo;
+        this.idPedido = idPedido;
+        this.numeroArticulos = numeroArticulos;
+        this.total = total;
+        this.mes = mes;
+        this.dia = dia;
+        this.año = año;
         
     }
     
@@ -50,7 +50,59 @@ public class Pedido {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) "
-                + "VALUES (" + this.idPedido + "," + this.numeroArticulos + "," + this.total + "," + this.mes + "," + this.dia + "," + this.anyo + ");");
+                + "VALUES (" + this.idPedido + "," + this.numeroArticulos + "," + this.total + ",'" + this.mes + "/" + this.dia + "/" + this.año + "');");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarArticulos(int nuevosArticulos) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE pedido SET numero_articulos = " + nuevosArticulos + " WHERE id_pedido = " + this.idPedido + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarTotal(double nuevoTotal) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE pedido SET total = " + nuevoTotal + " WHERE id_pedido = " + this.idPedido + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+               
+    }
+    
+    public synchronized void actualizarFechaPedido(int nuevoMes,int nuevoDia,int nuevoAño) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE pedido SET fecha_pedido = '" + nuevoMes + "/" + nuevoDia + "/" + nuevoAño + "' WHERE id_pedido = " + this.idPedido + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_pedido = " + this.idPedido + ");");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

@@ -15,7 +15,7 @@ public class Distribuidor {
     
     private int idDistribuidor;
     private String nombreDistribuidor;
-    private float deuda;
+    private double deuda;
     
     /**
      * Constructor de la clase Distribuidor
@@ -23,11 +23,11 @@ public class Distribuidor {
      * @param nombreDistribuidor
      * @param deuda 
      */
-    public Distribuidor(int idDistribuidor,String nombreDistribuidor,float deuda) {
+    public Distribuidor(int idDistribuidor,String nombreDistribuidor,double deuda) {
       
-        idDistribuidor = this.idDistribuidor;
-        nombreDistribuidor = this.nombreDistribuidor;
-        deuda = this.deuda;
+        this.idDistribuidor = idDistribuidor;
+        this.nombreDistribuidor = nombreDistribuidor;
+        this.deuda = deuda;
         
     }
     
@@ -41,11 +41,50 @@ public class Distribuidor {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) "
-                + "VALUES (" + this.idDistribuidor + "," + this.nombreDistribuidor + "," + this.deuda + ");");
+                + "VALUES (" + this.idDistribuidor + ",'" + this.nombreDistribuidor + "'," + this.deuda + ");");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
         Conexion.cerrar();
+    }
+    
+    public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE distribuidor SET nombre_distribuidor = '" + nuevoNombre + "' WHERE id_distribuidor = " + this.idDistribuidor + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarDeuda(double nuevaDeuda) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE distribuidor SET deuda = " + nuevaDeuda + " WHERE id_distribuidor = " + this.idDistribuidor + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();    
+        
+    }
+    
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_distribuidor = " + this.idDistribuidor + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
     }
     
 }

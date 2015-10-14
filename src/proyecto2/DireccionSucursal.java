@@ -31,12 +31,12 @@ public class DireccionSucursal {
      */
     public DireccionSucursal(int idDireccionSucursal,String calleSucursal,String estadoSucursal,int numeroSucursal,String coloniaSucursal,String municipioDelegacionSucursal) {
     
-        idDireccionSucursal = this.idDireccionSucursal;
-        calleSucursal = this.calleSucursal;
-        estadoSucursal = this.estadoSucursal;
-        numeroSucursal = this.numeroSucursal;
-        coloniaSucursal = this.coloniaSucursal;
-        municipioDelegacionSucursal = this.municipioDelegacionSucursal;
+        this.idDireccionSucursal = idDireccionSucursal;
+        this.calleSucursal = calleSucursal;
+        this.estadoSucursal = estadoSucursal;
+        this.numeroSucursal = numeroSucursal;
+        this.coloniaSucursal = coloniaSucursal;
+        this.municipioDelegacionSucursal = municipioDelegacionSucursal;
         
     }
     
@@ -49,8 +49,21 @@ public class DireccionSucursal {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("INSERT INTO direccion_cliente (id_direccion_cliente,calle_cliente,estado_cliente,numero_cliente,colonia_cliente,municipio_delegacion_cliente) "
-                + "VALUES (" + this.idDireccionSucursal + "," + this.calleSucursal + "," + this.estadoSucursal + "," + this.numeroSucursal + "," + this.coloniaSucursal + "," + this.municipioDelegacionSucursal + ");");
+        cadena = cadena.concat("INSERT INTO direccion_cliente (calle_cliente,estado_cliente,numero_cliente,colonia_cliente,municipio_delegacion_cliente,id_direccion_cliente) "
+                + "VALUES ('" + this.calleSucursal + "','" + this.estadoSucursal + "'," + this.numeroSucursal + ",'" + this.coloniaSucursal + "','" + this.municipioDelegacionSucursal + "'," + this.idDireccionSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_direccion_sucursal = " + this.idDireccionSucursal + ");");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

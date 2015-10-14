@@ -22,8 +22,8 @@ public class Marca {
      * @param nombreMarca 
      */
     public Marca(int idMarca,String nombreMarca) {
-        idMarca = this.idMarca;
-        nombreMarca = this.nombreMarca;
+        this.idMarca = idMarca;
+        this.nombreMarca = nombreMarca;
     }
     
     /**
@@ -35,11 +35,37 @@ public class Marca {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO marca (id_marca,nombre_marca) "
-                + "VALUES (" + this.idMarca + "," + this.nombreMarca + ");");
+                + "VALUES (" + this.idMarca + ",'" + this.nombreMarca + "');");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
         Conexion.cerrar();
+    }
+    
+    public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE marca SET nombre_marca = '" + nuevoNombre + "' WHERE id_marca = " + this.idMarca + ");" );
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_marca = " + this.idMarca + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
     }
             
 }

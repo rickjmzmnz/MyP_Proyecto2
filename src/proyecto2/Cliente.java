@@ -33,13 +33,13 @@ public class Cliente {
      */
     public Cliente(int idCliente,String nombreCliente,String apellidoPaternoCliente,String apellidoMaternoCliente,int telefonoCliente,String correo,int tarjetaDeCredito) {
         
-        idCliente = this.idCliente;
-        nombreCliente = this.nombreCliente;
-        apellidoPaternoCliente = this.apellidoPaternoCliente;
-        apellidoMaternoCliente = this.apellidoMaternoCliente;
-        telefonoCliente = this.telefonoCliente;
-        correo = this.correo;
-        tarjetaDeCredito = this.tarjetaDeCredito;
+        this.idCliente = idCliente;
+        this.nombreCliente = nombreCliente;
+        this.apellidoPaternoCliente = apellidoPaternoCliente;
+        this.apellidoMaternoCliente = apellidoMaternoCliente;
+        this.telefonoCliente = telefonoCliente;
+        this.correo = correo;
+        this.tarjetaDeCredito = tarjetaDeCredito;
         
     }
     
@@ -54,7 +54,98 @@ public class Cliente {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) "
-                + "VALUES (" + this.idCliente + "," + this.nombreCliente + "," + this.apellidoPaternoCliente + "," + this.apellidoMaternoCliente + "," + this.telefonoCliente + "," + this.correo + "," + this.tarjetaDeCredito + ");");
+                + "VALUES (" + this.idCliente + ",'" + this.nombreCliente + "','" + this.apellidoPaternoCliente + "','" + this.apellidoMaternoCliente + "'," + this.telefonoCliente + ",'" + this.correo + "'," + this.tarjetaDeCredito + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE cliente SET nombre_cliente = '" + nuevoNombre + "' WHERE id_cliente = " + this.idCliente + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarApellidoPaterno(String nuevoApellidoPaterno) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE cliente SET apellido_paterno_cliente = '" + nuevoApellidoPaterno + "' WHERE id_cliente = " + this.idCliente + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarApellidoMaterno(String nuevoApellidoMaterno) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE cliente SET apellido_materno_cliente = '" + nuevoApellidoMaterno + "' WHERE id_cliente = " + this.idCliente + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarTelefono(int nuevoTelefono) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE cliente SET telefono_cliente = " + nuevoTelefono + " WHERE id_cliente = " + this.idCliente + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    } 
+     
+    public synchronized void actualizarCorreo(String nuevoCorreo) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE cliente SET correo = '" + nuevoCorreo + "' WHERE id_cliente = " + this.idCliente + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void actualizarTarjeta(String nuevaTarjeta) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE cliente SET tarjeta_de_credito = " + nuevaTarjeta + " WHERE id_cliente = " + this.idCliente + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+     
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_cliente = " + this.idCliente + ");");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

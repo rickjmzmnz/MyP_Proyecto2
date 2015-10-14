@@ -13,4 +13,41 @@ import java.sql.*;
  */
 public class RealizaCompra {
     
+    private int idPedidoRealizaCompra;
+    private int idClienteRealizaCompra;
+    
+    public RealizaCompra(int idPedidoRealizaCompra,int idClienteRealizaCompra){
+        
+        this.idPedidoRealizaCompra = idPedidoRealizaCompra;
+        this.idClienteRealizaCompra = idClienteRealizaCompra;
+        
+    }
+    
+    public synchronized void agregar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("INSERT INTO realiza_compra (id_pedido_realiza_compra,id_cliente_realiza_compra) "
+                + "VALUES (" + this.idPedidoRealizaCompra + "," + this.idClienteRealizaCompra + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+        
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_pedido_realiza_compra = " + this.idPedidoRealizaCompra + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }    
+    
 }

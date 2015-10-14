@@ -42,17 +42,17 @@ public class Empleado {
      */
     public Empleado(int idEmpleado,String nombreEmpleado,String apellidoPaternoEmpleado,String apellidoMaternoEmpleado,int mesN,int diaN,int anyoN,int mesI,int diaI,int anyoI,String posicion) {
         
-        idEmpleado = this.idEmpleado;
-        nombreEmpleado = this.nombreEmpleado;
-        apellidoPaternoEmpleado = this.apellidoPaternoEmpleado;
-        apellidoMaternoEmpleado = this.apellidoMaternoEmpleado;
-        mesN = this.mesN;
-        diaN = this.diaN;
-        anyoN = this.anyoN;
-        mesI = this.mesI;
-        diaI = this.diaI;
-        anyoI = this.anyoI;
-        posicion = this.posicion;
+        this.idEmpleado = idEmpleado;
+        this.nombreEmpleado = nombreEmpleado;
+        this.apellidoPaternoEmpleado = apellidoPaternoEmpleado;
+        this.apellidoMaternoEmpleado = apellidoMaternoEmpleado;
+        this.mesN= mesN;
+        this.diaN = diaN;
+        this.anyoN = anyoN;
+        this.mesI = mesI;
+        this.diaI = diaI;
+        this.anyoI = anyoI;
+        this.posicion = posicion;
         
     }
     
@@ -66,8 +66,21 @@ public class Empleado {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO empleado (id_empleado,nombre_empleado,apellido_paterno_empleado,apellido_materno_empleado,fecha_de_nacimiento,fecha_de_ingreso,posicion) "
-                + "VALUES (" + this.idEmpleado + "," + this.nombreEmpleado + "," + this.apellidoPaternoEmpleado + "," + this.apellidoMaternoEmpleado + "," + this.mesN + "," + this.diaN + "," + this.anyoN + "," + this.mesI + "," + this.diaI + "," + this.anyoI + "," + this.posicion + ");");
+                + "VALUES (" + this.idEmpleado + ",'" + this.nombreEmpleado + "','" + this.apellidoPaternoEmpleado + "','" + this.apellidoMaternoEmpleado + "'," + this.mesN + "/" + this.diaN + "/" + this.anyoN + "," + this.mesI + "/" + this.diaI + "/" + this.anyoI + ",'" + this.posicion + "');");
         declaracion.executeLargeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    public synchronized void eliminar() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("DELETE FROM marca WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
         Conexion.cerrar();
