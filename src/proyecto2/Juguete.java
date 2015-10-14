@@ -52,6 +52,11 @@ public class Juguete {
         
     }
     
+    /**
+     * Método para actualizar el nombre de un juguete
+     * @param nuevoNombre - el nuevo nombre del juguete
+     * @throws SQLException 
+     */
     public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -65,6 +70,11 @@ public class Juguete {
         
     } 
     
+    /**
+     * Método para actualizar el precio de un juguete
+     * @param nuevoPrecio - el nuevo precio del juguete
+     * @throws SQLException 
+     */
     public synchronized void actualizarPrecio(double nuevoPrecio) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -78,6 +88,11 @@ public class Juguete {
         
     }
     
+    /**
+     * Método para actualizar la clasificación de un juguete
+     * @param nuevaClasificacion - la nueva clasificación del juguete
+     * @throws SQLException 
+     */
     public synchronized void actualizarClasificacion(int nuevaClasificacion) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -91,6 +106,10 @@ public class Juguete {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla juguete
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

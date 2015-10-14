@@ -29,14 +29,14 @@ public class DireccionSucursal {
      * @param coloniaSucursal
      * @param municipioDelegacionSucursal 
      */
-    public DireccionSucursal(int idDireccionSucursal,String calleSucursal,String estadoSucursal,int numeroSucursal,String coloniaSucursal,String municipioDelegacionSucursal) {
+    public DireccionSucursal(String calleSucursal,String estadoSucursal,int numeroSucursal,String coloniaSucursal,String municipioDelegacionSucursal,int idDireccionSucursal) {
     
-        this.idDireccionSucursal = idDireccionSucursal;
         this.calleSucursal = calleSucursal;
         this.estadoSucursal = estadoSucursal;
         this.numeroSucursal = numeroSucursal;
         this.coloniaSucursal = coloniaSucursal;
         this.municipioDelegacionSucursal = municipioDelegacionSucursal;
+        this.idDireccionSucursal = idDireccionSucursal;
         
     }
     
@@ -49,7 +49,7 @@ public class DireccionSucursal {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("INSERT INTO direccion_cliente (calle_cliente,estado_cliente,numero_cliente,colonia_cliente,municipio_delegacion_cliente,id_direccion_cliente) "
+        cadena = cadena.concat("INSERT INTO direccion_sucursal (calle_sucursal,estado_sucursal,numero_sucursal,colonia_sucursal,municipio_delegacion_sucursal,id_direccion_sucursal) "
                 + "VALUES ('" + this.calleSucursal + "','" + this.estadoSucursal + "'," + this.numeroSucursal + ",'" + this.coloniaSucursal + "','" + this.municipioDelegacionSucursal + "'," + this.idDireccionSucursal + ");");
         declaracion.executeUpdate(cadena);
         declaracion.close();
@@ -58,6 +58,100 @@ public class DireccionSucursal {
         
     }
     
+    /**
+     * Método para actualizar la calle de una sucursal
+     * @param nuevaCalle - la nueva calle de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarCalle(String nuevaCalle) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE direccion_sucursal SET calle_sucursal = '" + nuevaCalle + "' WHERE id_direccion_sucursal = " + this.idDireccionSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el estado de una sucursal
+     * @param nuevoEstado - el nuevo estado de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarEstado(String nuevoEstado) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE direccion_sucursal SET estado_sucursal = '" + nuevoEstado + "' WHERE id_direccion_sucursal = " + this.idDireccionSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el numero de sucursal
+     * @param nuevoNumero - el nuevo numero de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarNumero(int nuevoNumero) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE direccion_sucursal SET numero_sucursal = " + nuevoNumero + " WHERE id_direccion_sucursal = " + this.idDireccionSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar la colonia de una sucursal
+     * @param nuevaColonia - la nueva colonia de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarColonia(String nuevaColonia) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE direccion_sucursal SET colonia_sucursal = '" + nuevaColonia + "' WHERE id_direccion_sucursal = " + this.idDireccionSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el municipio o delegacion de una sucursal
+     * @param nuevoMunDel - el nuevo municipio o delegacion de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarMunDel(String nuevoMunDel) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE direccion_sucursal SET municipio_delegacion_sucursal = '" + nuevoMunDel + "' WHERE id_direccion_sucursal = " + this.idDireccionSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para eliminar datos de la tabla direccion_sucursal
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

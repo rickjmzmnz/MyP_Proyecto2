@@ -58,6 +58,11 @@ public class DireccionCliente {
         
     }
     
+    /**
+     * Método para actualizar la calle de un cliente
+     * @param nuevaCalle - la nueva calle del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarCalle(String nuevaCalle) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -71,6 +76,11 @@ public class DireccionCliente {
         
     }
     
+    /**
+     * Método para actualizar el estado de un cliente
+     * @param nuevoEstado - el nuevo estado del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarEstado(String nuevoEstado) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -84,6 +94,11 @@ public class DireccionCliente {
         
     }
     
+    /**
+     * Método para actualizar el numero telefónico de un cliente
+     * @param nuevoNumero - el nuevo numero telefónico del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarNumero(int nuevoNumero) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -97,6 +112,11 @@ public class DireccionCliente {
         
     }
     
+    /**
+     * Método para actualizar la colonia de un cliente
+     * @param nuevaColonia - la nueva colonia del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarColonia(String nuevaColonia) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -110,6 +130,11 @@ public class DireccionCliente {
         
     }
     
+    /**
+     * Método para actualizar el municipio o delegacion de un cliente
+     * @param nuevoMunDel - el nuevo municipio o delegacion del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarMunicipioDelegacion(String nuevoMunDel) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -123,6 +148,10 @@ public class DireccionCliente {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla direccion_cliente
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

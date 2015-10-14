@@ -38,6 +38,10 @@ public class DistribuyeA {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla distribuye_a
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

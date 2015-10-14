@@ -74,6 +74,122 @@ public class Empleado {
         
     }
     
+    /**
+     * Método para actualizar el nombre de un empleado
+     * @param nuevoNombre - el nuevo nombre del empleado
+     * @throws SQLException 
+     */
+    public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE empleado SET nombre_empleado = '" + nuevoNombre + "' WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el apellido paterno de un empleado
+     * @param nuevoAPaterno - el nuevo apellido paterno del empleado
+     * @throws SQLException 
+     */
+    public synchronized void actualizarApellidoPaterno(String nuevoAPaterno) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE empleado SET apellido_paterno_empleado = '" + nuevoAPaterno + "' WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el apellido materno de un empleado
+     * @param nuevoAMaterno - el nuevo apellido materno del empleado
+     * @throws SQLException 
+     */
+    public synchronized void actualizarApellidoMaterno(String nuevoAMaterno) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE empleado SET apellido_materno_empleado = '" + nuevoAMaterno + "' WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar la fecha de nacimiento de un empleado
+     * @param nuevoMesN - el nuevo mes de nacimiento
+     * @param nuevoDiaN - el nuevo dia de nacimiento
+     * @param nuevoAñoN - el nuevo año de nacimiento
+     * @throws SQLException 
+     */
+    public synchronized void actualizarFechaNacimiento(int nuevoMesN,int nuevoDiaN,int nuevoAñoN) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE empleado SET fecha_de_nacimiento = '" + nuevoMesN + "/" + nuevoDiaN + "/" + nuevoAñoN + "' WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar la fecha de ingreso de un empleado
+     * @param nuevoMesI - el nuevo mes de ingreso
+     * @param nuevoDiaI - el nuevo dia de ingreso
+     * @param nuevoAñoI - el nuevo año de ingreso
+     * @throws SQLException 
+     */
+    public synchronized void actualizarFechaIngreso(int nuevoMesI,int nuevoDiaI,int nuevoAñoI) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE empleado SET fecha_de_ingreso = '" + nuevoMesI + "/" + nuevoDiaI + "/" + nuevoAñoI + "' WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar la posición de trabajo de un empleado
+     * @param nuevaPosicion - la nueva posicion de trabajo del empleado
+     * @throws SQLException 
+     */
+    public synchronized void actualizarPosicion(String nuevaPosicion) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE empleado SET posicion = '" + nuevaPosicion + "' WHERE id_empleado = " + this.idEmpleado + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para eliminar datos de la tabla empleado
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

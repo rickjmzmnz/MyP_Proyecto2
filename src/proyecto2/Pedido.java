@@ -58,6 +58,11 @@ public class Pedido {
         
     }
     
+    /**
+     * Método para actualizar el numero de artículos
+     * @param nuevosArticulos - el nuevo numero de artículos
+     * @throws SQLException 
+     */
     public synchronized void actualizarArticulos(int nuevosArticulos) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -71,6 +76,11 @@ public class Pedido {
         
     }
     
+    /**
+     * Método para actualizar el total a pagar de un pedido
+     * @param nuevoTotal - nuevo total a pagar del pedido
+     * @throws SQLException 
+     */
     public synchronized void actualizarTotal(double nuevoTotal) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -84,6 +94,13 @@ public class Pedido {
                
     }
     
+    /**
+     * Método para actualizar la fecha de un pedido
+     * @param nuevoMes - nuevo mes del pedido
+     * @param nuevoDia - nuevo día del pedido
+     * @param nuevoAño - nuevo año del pedido
+     * @throws SQLException 
+     */
     public synchronized void actualizarFechaPedido(int nuevoMes,int nuevoDia,int nuevoAño) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -97,6 +114,10 @@ public class Pedido {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla pedido
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

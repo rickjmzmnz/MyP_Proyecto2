@@ -37,6 +37,10 @@ public class RealizaCompra {
         
     }
         
+    /**
+     * Método para eliminar datos de la tabla realiza_compra
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

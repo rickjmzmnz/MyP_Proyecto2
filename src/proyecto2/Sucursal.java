@@ -52,6 +52,64 @@ public class Sucursal {
         
     }
     
+    /**
+     * Método para actualizar el nombre de una sucursal
+     * @param nuevoNombre - el nuevo nombre de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE sucursal SET nombre_sucursal = '" + nuevoNombre + "' WHERE id_sucursal = " + this.idSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el telefono de una sucursal
+     * @param nuevoTelefono - el nuevo telefono de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarTelefono(int nuevoTelefono) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE sucursal SET telefono_sucursal = " + nuevoTelefono + " WHERE id_sucursal = " + this.idSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+    
+    /**
+     * Método para actualizar el balance de una sucursal
+     * @param nuevoBalance - el nuevo balance de la sucursal
+     * @throws SQLException 
+     */
+    public synchronized void actualizarBalance(double nuevoBalance) throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("UPDATE sucursal SET balance = " + nuevoBalance + " WHERE id_sucursal = " + this.idSucursal + ");");
+        declaracion.executeUpdate(cadena);
+        declaracion.close();
+        //conexion.commit();
+        Conexion.cerrar();
+        
+    }
+        
+    /**
+     * Método para eliminar datos de la tabla sucursal
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

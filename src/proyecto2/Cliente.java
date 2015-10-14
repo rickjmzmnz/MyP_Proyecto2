@@ -62,6 +62,11 @@ public class Cliente {
         
     }
     
+    /**
+     * Método para actualizar el nombre de un cliente
+     * @param nuevoNombre - el nuevo nombre del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -75,6 +80,11 @@ public class Cliente {
         
     }
     
+    /**
+     * Método para actualizar el apellido paterno de un cliente
+     * @param nuevoApellidoPaterno - el nuevo apellido paterno del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarApellidoPaterno(String nuevoApellidoPaterno) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -88,6 +98,11 @@ public class Cliente {
         
     }
     
+    /**
+     * Método para actualizar el apellido materno de un cliente
+     * @param nuevoApellidoMaterno - nuevo apellido materno de un cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarApellidoMaterno(String nuevoApellidoMaterno) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -101,6 +116,11 @@ public class Cliente {
         
     }
     
+    /**
+     * Método para actualizar el telefono de un cliente
+     * @param nuevoTelefono - el nuevo numero del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarTelefono(int nuevoTelefono) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -114,6 +134,11 @@ public class Cliente {
         
     } 
      
+    /**
+     * Método para actualizar el correo de un cliente
+     * @param nuevoCorreo - el nuevo correo del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarCorreo(String nuevoCorreo) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -127,6 +152,11 @@ public class Cliente {
         
     }
     
+    /**
+     * Método para actualizar la tarjeta de crédito de un cliente
+     * @param nuevaTarjeta - la nueva tarjeta de credito del cliente
+     * @throws SQLException 
+     */
     public synchronized void actualizarTarjeta(String nuevaTarjeta) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -140,6 +170,10 @@ public class Cliente {
         
     }
      
+    /**
+     * Método para eliminar datos de la tabla cliente
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

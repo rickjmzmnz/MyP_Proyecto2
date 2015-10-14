@@ -42,6 +42,11 @@ public class Marca {
         Conexion.cerrar();
     }
     
+    /**
+     * Método para actualizar el nombre de una marca
+     * @param nuevoNombre - nuevo nombre la marca
+     * @throws SQLException 
+     */
     public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -55,6 +60,10 @@ public class Marca {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla marca
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

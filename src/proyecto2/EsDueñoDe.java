@@ -37,6 +37,10 @@ public class EsDueñoDe {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla es_dueño_de
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

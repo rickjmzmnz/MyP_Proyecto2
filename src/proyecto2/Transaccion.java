@@ -39,6 +39,10 @@ public class Transaccion {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla transaccion
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

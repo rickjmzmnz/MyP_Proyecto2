@@ -48,6 +48,11 @@ public class Distribuidor {
         Conexion.cerrar();
     }
     
+    /**
+     * Método para actualizar el nombre de un distribuidor
+     * @param nuevoNombre - el nuevo nombre del distribuidor
+     * @throws SQLException 
+     */
     public synchronized void actualizarNombre(String nuevoNombre) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -61,6 +66,11 @@ public class Distribuidor {
         
     }
     
+    /**
+     * Método para actializar la deuda con un distribuidor
+     * @param nuevaDeuda - la nueva deuda con el distribuidor
+     * @throws SQLException 
+     */
     public synchronized void actualizarDeuda(double nuevaDeuda) throws SQLException {
         
         Connection conexion = Conexion.abrir();
@@ -74,6 +84,10 @@ public class Distribuidor {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla distribuidor
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

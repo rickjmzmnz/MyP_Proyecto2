@@ -37,6 +37,10 @@ public class TrabajaEn {
         
     }
     
+    /**
+     * Método para eliminar datos de la tabla trabaja_en
+     * @throws SQLException 
+     */
     public synchronized void eliminar() throws SQLException {
         
         Connection conexion = Conexion.abrir();
