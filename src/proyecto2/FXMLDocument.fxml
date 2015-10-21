@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto2.FXMLDocumentController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="proyecto2.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="principal" blendMode="DARKEN" prefHeight="527.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane layoutX="52.0" layoutY="50.0" prefHeight="527.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <VBox prefHeight="468.0" prefWidth="168.0" spacing="25.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Hyperlink fx:id="juguete" onAction="#muestraJuguete" text="Juguete" />
+                        <Hyperlink fx:id="marca" text="Marca" />
+                        <Hyperlink fx:id="distribuidor" text="Distribuidor" />
+                        <Hyperlink fx:id="pedido" text="Pedido" />
+                        <Hyperlink fx:id="empleado" text="Empleado" />
+                        <Hyperlink fx:id="sucursal" text="Sucursal" />
+                        <Hyperlink fx:id="direccionSucursal" text="Direccion Sucursal" />
+                        <Hyperlink fx:id="cliente" text="Cliente" />
+                        <Hyperlink fx:id="direccionCliente" text="Direccion Cliente" />
+                        <Hyperlink fx:id="salir" onAction="#salir" text="Salir" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <center>
+                  <ImageView fitHeight="394.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../resources/papa.jpg" />
+                     </image>
+                  </ImageView>
+               </center>
+               <top>
+                  <Label prefHeight="15.0" prefWidth="151.0" text="Rickys Toys" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets top="30.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </top>
+            </BorderPane>
+         </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorJuguete" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarJuguete" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarJuguete" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarJuguete" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarJuguete" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+               <center>
+                  <TableView fx:id="tablaJuguete" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnCodigo" prefWidth="140.0" text="Codigo de barras" />
+                        <TableColumn fx:id="columnNombreJuguete" prefWidth="176.0" text="Nombre" />
+                        <TableColumn fx:id="columnPrecio" prefWidth="87.0" text="Precio" />
+                        <TableColumn fx:id="columnClasificacion" prefWidth="120.0" text="Clasificacion" />
+                     </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
 </AnchorPane>

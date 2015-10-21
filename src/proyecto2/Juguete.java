@@ -34,6 +34,16 @@ public class Juguete {
         
     }
     
+    public static synchronized ResultSet selecciona() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("SELECT * FROM juguete;");
+        return declaracion.executeQuery(cadena);
+            
+    }
+    
     /**
      * Método para agregar datos a la tabla juguete
      * @throws SQLException 
