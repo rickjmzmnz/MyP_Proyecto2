@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="527.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="proyecto2.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto2.FXMLDocumentController">
    <children>
       <AnchorPane fx:id="principal" blendMode="DARKEN" prefHeight="527.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -19,13 +19,13 @@
                   <VBox prefHeight="468.0" prefWidth="168.0" spacing="25.0" BorderPane.alignment="CENTER">
                      <children>
                         <Hyperlink fx:id="juguete" onAction="#muestraJuguete" text="Juguete" />
-                        <Hyperlink fx:id="marca" text="Marca" />
-                        <Hyperlink fx:id="distribuidor" text="Distribuidor" />
-                        <Hyperlink fx:id="pedido" text="Pedido" />
-                        <Hyperlink fx:id="empleado" text="Empleado" />
-                        <Hyperlink fx:id="sucursal" text="Sucursal" />
+                        <Hyperlink fx:id="marca" onAction="#muestraMarca" text="Marca" />
+                        <Hyperlink fx:id="distribuidor" onAction="#muestraDistribuidor" text="Distribuidor" />
+                        <Hyperlink fx:id="pedido" onAction="#muestraPedido" text="Pedido" />
+                        <Hyperlink fx:id="empleado" onAction="#muestaEmpleado" text="Empleado" />
+                        <Hyperlink fx:id="sucursal" onAction="#muestraSucursal" text="Sucursal" />
                         <Hyperlink fx:id="direccionSucursal" text="Direccion Sucursal" />
-                        <Hyperlink fx:id="cliente" text="Cliente" />
+                        <Hyperlink fx:id="cliente" onAction="#muestraCliente" text="Cliente" />
                         <Hyperlink fx:id="direccionCliente" text="Direccion Cliente" />
                         <Hyperlink fx:id="salir" onAction="#salir" text="Salir" />
                      </children>
@@ -86,13 +86,177 @@
             </BorderPane>
          </children>
       </AnchorPane>
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="anchorMarca" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarMarca" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarMarca" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarMarca" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarMarca" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+               <center>
+                  <TableView fx:id="tablaMarca" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnMarca" prefWidth="255.0" text="ID Marca" />
+                        <TableColumn fx:id="columnNombreMarca" prefWidth="271.0" text="Nombre " />
+                     </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorDistribuidor" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0">
+               <center>
+                  <TableView fx:id="tablaDistribuidor" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnIdDistribuidor" prefWidth="140.0" text="ID Distribuidor" />
+                        <TableColumn fx:id="columnNombreDistribuidor" prefWidth="252.0" text="Nombre" />
+                        <TableColumn fx:id="columnDeuda" prefWidth="134.0" text="Deuda" />
+                     </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarDistribuidor" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarDistribuidor" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarDistribuidor" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarDistribuidor" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorPedido" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0">
+               <center>
+                  <TableView fx:id="tablaPedido" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnIdPedido" prefWidth="87.0" text="ID Pedido" />
+                        <TableColumn fx:id="columnArticulos" prefWidth="189.0" text="Numero de articulos" />
+                        <TableColumn fx:id="columnTotal" minWidth="5.0" prefWidth="70.0" text="Total" />
+                        <TableColumn fx:id="columnFechaPedido" prefWidth="255.0" text="Fecha de pedido" />
+                     </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarPedido" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarPedido" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarPedido" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarPedido" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorEmpleado" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0">
+               <center>
+                  <TableView fx:id="tablaEmpleado" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnIdEmpleado" prefWidth="75.0" text="ID Empleado" />
+                        <TableColumn fx:id="ColumnNombreEmpleado" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="ColumnPaternoEmpleado" prefWidth="75.0" text="Apellido Paterno" />
+                        <TableColumn fx:id="columnMaternoEmpleado" prefWidth="75.0" text="Apellido Materno" />
+                        <TableColumn fx:id="columnNacimiento" prefWidth="75.0" text="Fecha de nacimiento" />
+                        <TableColumn fx:id="columnIngreso" prefWidth="75.0" text="Fecha de ingreso" />
+                        <TableColumn fx:id="columnPosicion" prefWidth="75.0" text="Posicion" />
+                     </columns></TableView>
+               </center>
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarEmpleado" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarEmpleado" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarEmpleado" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarEmpleado" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorSucursal" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0">
+               <center>
+                  <TableView fx:id="tablaSucursal" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnIdSucursal" prefWidth="104.0" text="ID Sucursal" />
+                        <TableColumn fx:id="columnNombreSucursal" prefWidth="163.0" text="Nombre" />
+                        <TableColumn fx:id="columnTelefonoSucursal" prefWidth="135.0" text="Telefono" />
+                        <TableColumn fx:id="columnBalance" prefWidth="124.0" text="Balance" />
+                     </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarSucursal" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarSucursal" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarSucursal" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarSucursal" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorDireccionSucursal" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="anchorCliente" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="527.0" prefWidth="527.0">
+               <center>
+                  <TableView fx:id="tablaCliente" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnIdCliente" prefWidth="75.0" text="ID Cliente" />
+                        <TableColumn fx:id="ColumnNombreCliente" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="ColumnPaternoCliente" prefWidth="75.0" text="Apellido Paterno" />
+                        <TableColumn fx:id="columnMaternoCliente" prefWidth="75.0" text="Apellido Materno" />
+                        <TableColumn fx:id="columnTelefonoCliente" prefWidth="75.0" text="Telefono" />
+                        <TableColumn fx:id="columnCorreo" prefWidth="75.0" text="Correo" />
+                        <TableColumn fx:id="columnTarjeta" prefWidth="75.0" text="Tarjeta de credito" />
+                     </columns>
+                  </TableView>
+               </center>
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="agregarCliente" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="eliminarCliente" mnemonicParsing="false" text="Eliminar" />
+                        <Button fx:id="actualizarCliente" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="regresarCliente" mnemonicParsing="false" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" top="30.0" />
+                     </padding>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorDireccionCliente" disable="true" prefHeight="527.0" prefWidth="527.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

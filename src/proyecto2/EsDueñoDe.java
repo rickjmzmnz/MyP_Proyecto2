@@ -23,6 +23,21 @@ public class EsDueñoDe {
         
     }
     
+    /**
+     * Método para seleccionar los datos de la tabla es_dueño_de
+     * @return todos los datos de la tabla
+     * @throws SQLException 
+     */
+    public static synchronized ResultSet selecciona() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("SELECT * FROM es_dueño_de");
+        return declaracion.executeQuery(cadena);
+        
+    }
+    
     public synchronized void agregar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

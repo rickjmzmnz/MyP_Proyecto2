@@ -23,6 +23,21 @@ public class TrabajaEn {
         
     }
     
+    /**
+     * Método para seleccionar los datos de la tabla trabaja_en
+     * @return todos los datos de la tabla
+     * @throws SQLException 
+     */
+    public static synchronized ResultSet selecciona() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("SELECT * FROM trabaja_en");
+        return declaracion.executeQuery(cadena);
+        
+    }
+    
     public synchronized void agregar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

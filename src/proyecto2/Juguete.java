@@ -34,6 +34,12 @@ public class Juguete {
         
     }
     
+    
+    /**
+     * Método para seleccionar los datos de la tabla juguete
+     * @return todos los datos de la tabla
+     * @throws SQLException 
+     */
     public static synchronized ResultSet selecciona() throws SQLException {
         
         Connection conexion = Conexion.abrir();

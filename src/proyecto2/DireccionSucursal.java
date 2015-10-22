@@ -41,6 +41,21 @@ public class DireccionSucursal {
     }
     
     /**
+     * Método para seleccionar los datos de la tabla direccion_sucursal
+     * @return todos los datos de la tabla
+     * @throws SQLException 
+     */
+    public static synchronized ResultSet selecciona() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("SELECT * FROM direccion_sucursal");
+        return declaracion.executeQuery(cadena);
+        
+    }
+    
+    /**
      * Método para agregar datos a la tabla dirrecion_sucursal
      * @throws SQLException 
      */

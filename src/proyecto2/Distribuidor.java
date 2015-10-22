@@ -32,6 +32,21 @@ public class Distribuidor {
     }
     
     /**
+     * Método para seleccionar los datos de la tabla distribuidor
+     * @return todos los datos de la tabla
+     * @throws SQLException 
+     */
+    public static synchronized ResultSet selecciona() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("SELECT * FROM distribuidor");
+        return declaracion.executeQuery(cadena);
+        
+    }
+    
+    /**
      * Método para agregar datos a la tabla distribuidor
      * @throws SQLException 
      */

@@ -25,6 +25,22 @@ public class Transaccion {
         
     }
     
+    /**
+     * Método para seleccionar los datos de la tabla transaccion
+     * 
+     * @return todos los datos de la tabla
+     * @throws SQLException 
+     */
+    public static synchronized ResultSet selecciona() throws SQLException {
+        
+        Connection conexion = Conexion.abrir();
+        Statement declaracion = conexion.createStatement();
+        String cadena = "";
+        cadena = cadena.concat("SELECT * FROM transaccion");
+        return declaracion.executeQuery(cadena);
+        
+    }
+    
     public synchronized void agregar() throws SQLException {
         
         Connection conexion = Conexion.abrir();

@@ -17,6 +17,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -36,11 +37,57 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Hyperlink juguete;
     @FXML
+    private Hyperlink marca;
+    @FXML
+    private Hyperlink distribuidor;
+    @FXML
+    private Hyperlink pedido;
+    @FXML
+    private Hyperlink empleado;
+    @FXML
+    private Hyperlink sucursal;
+    @FXML
+    private Hyperlink direccionSucursal;
+    @FXML
+    private Hyperlink cliente;
+    @FXML
+    private Hyperlink direccionCliente;
+    @FXML
     private AnchorPane principal;
     @FXML
     private AnchorPane anchorJuguete;
     @FXML
+    private AnchorPane anchorMarca;
+    @FXML
+    private AnchorPane anchorDistribuidor;
+    @FXML
+    private AnchorPane anchorPedido;
+    @FXML
+    private AnchorPane anchorEmpleado;
+    @FXML
+    private AnchorPane anchorSucursal;
+    @FXML
+    private AnchorPane anchorDireccionSucursal;
+    @FXML
+    private AnchorPane anchorCliente;
+    @FXML
+    private AnchorPane anchorDireccionCliente;
+    @FXML
     private TableView<ObservableList<String>> tablaJuguete;
+    @FXML
+    private TableView<ObservableList<String>> tablaMarca;
+    @FXML
+    private TableView<ObservableList<String>> tablaDistribuidor;
+    @FXML
+    private TableView<ObservableList<String>> tablaPedido;
+    @FXML
+    private TableView<ObservableList<String>> tablaEmpleado;
+    @FXML
+    private TableView<ObservableList<String>> tablaSucursal;
+    @FXML
+    private TableView<ObservableList<String>> tablaCliente;
+    @FXML
+    private Button regresarJuguete;
     
     @FXML
     private void muestraJuguete(ActionEvent e) throws SQLException {
@@ -54,10 +101,90 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
+    private void muestraMarca(ActionEvent e) throws SQLException {
+        
+        principal.setVisible(false);
+        principal.setDisable(false);
+        anchorMarca.setVisible(true);
+        anchorMarca.setDisable(false);
+        agregaTabla(tablaMarca, Marca.selecciona());
+        
+    }
+    
+    @FXML
+    private void muestraDistribuidor(ActionEvent e) throws SQLException {
+        
+        principal.setVisible(false);
+        principal.setDisable(false);
+        anchorDistribuidor.setVisible(true);
+        anchorDistribuidor.setDisable(false);
+        agregaTabla(tablaDistribuidor,Distribuidor.selecciona());
+        
+    }
+    
+    @FXML
+    private void muestraPedido(ActionEvent e) throws SQLException {
+        
+        principal.setVisible(false);
+        principal.setDisable(false);
+        anchorPedido.setVisible(true);
+        anchorPedido.setDisable(false);
+        agregaTabla(tablaPedido,Pedido.selecciona());
+        
+    }
+    
+    @FXML
+    private void muestraEmpleado(ActionEvent e) throws SQLException {
+        
+        principal.setVisible(false);
+        principal.setDisable(false);
+        anchorEmpleado.setVisible(true);
+        anchorEmpleado.setDisable(false);
+        agregaTabla(tablaEmpleado,Empleado.selecciona());
+        
+    }
+    
+    @FXML
+    private void muestraSucursal(ActionEvent e) throws SQLException {
+        
+        principal.setVisible(false);
+        principal.setDisable(false);
+        anchorSucursal.setVisible(true);
+        anchorSucursal.setDisable(false);
+        agregaTabla(tablaSucursal,Sucursal.selecciona());
+        
+    }
+    
+    @FXML
+    private void muestraCliente(ActionEvent e) throws SQLException {
+        
+        principal.setVisible(false);
+        principal.setDisable(false);
+        anchorCliente.setVisible(true);
+        anchorCliente.setDisable(false);
+        agregaTabla(tablaCliente,Cliente.selecciona());
+        
+    }
+    
+    
+    @FXML
     private void salir(ActionEvent e) {
+        
         Conexion.cerrar();
         System.exit(0);
+        
     }
+    
+    /**@FXML 
+    private void regresaDeJuguete(ActionEvent e) {
+        
+        if(regresarJuguete.isPressed())
+        principal.setVisible(true);
+        principal.setDisable(false);
+        anchorJuguete.setVisible(false);
+        anchorJuguete.setDisable(false);
+                
+    }*/
     
    /*private static void mostrarTabla(TableView<ObservableList<String>> tabla, ResultSet resultado) {
         
