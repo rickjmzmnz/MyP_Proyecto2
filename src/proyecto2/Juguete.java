@@ -131,7 +131,7 @@ public class Juguete {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE codigo_de_barras = " + this.codigoDeBarras + ");");
+        cadena = cadena.concat("DELETE FROM juguete WHERE codigo_de_barras = " + this.codigoDeBarras + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
