@@ -2,7 +2,7 @@ PRAGMA foreign_keys = ON;
 
 CREATE TABLE distribuidor(
 id_distribuidor integer,
-nombre_distriuidor varchar(30),
+nombre_distribuidor varchar(30),
 deuda double,
 PRIMARY KEY(id_distribuidor)
 );
@@ -34,9 +34,9 @@ id_cliente integer,
 nombre_cliente varchar(30),
 apellido_paterno_cliente varchar(30),
 apellido_materno_cliente varchar(30),
-telefono_cliente integer,
+telefono_cliente double,
 correo varchar(50),
-tarjeta_de_credito integer,
+tarjeta_de_credito double,
 PRIMARY KEY(id_cliente)
 );
 
@@ -53,7 +53,7 @@ FOREIGN KEY(id_direccion_cliente) REFERENCES cliente(id_cliente) ON DELETE CASCA
 CREATE TABLE sucursal(
 id_sucursal integer,
 nombre_sucursal varchar(30),
-telefono_sucursal integer,
+telefono_sucursal double,
 balance double,
 PRIMARY KEY(id_sucursal)
 );
