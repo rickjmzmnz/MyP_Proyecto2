@@ -84,7 +84,7 @@ public class Marca {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_marca = " + this.idMarca + ");");
+        cadena = cadena.concat("DELETE FROM marca WHERE id_marca = " + this.idMarca + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

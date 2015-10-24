@@ -172,7 +172,7 @@ public class DireccionCliente {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_direccion_cliente = " + this.idDireccionCliente + ");");
+        cadena = cadena.concat("DELETE FROM direccion_cliente WHERE id_direccion_cliente = " + this.idDireccionCliente + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

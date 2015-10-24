@@ -138,7 +138,7 @@ public class Pedido {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_pedido = " + this.idPedido + ");");
+        cadena = cadena.concat("DELETE FROM pedido WHERE id_pedido = " + this.idPedido + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

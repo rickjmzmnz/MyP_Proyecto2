@@ -17,9 +17,9 @@ public class Cliente {
     private String nombreCliente;
     private String apellidoPaternoCliente;
     private String apellidoMaternoCliente;
-    private int telefonoCliente;
+    private double telefonoCliente;
     private String correo;
-    private int tarjetaDeCredito;
+    private double tarjetaDeCredito;
     
     /**
      * Constructor de la clase Cliente
@@ -31,7 +31,7 @@ public class Cliente {
      * @param correo
      * @param tarjetaDeCredito 
      */
-    public Cliente(int idCliente,String nombreCliente,String apellidoPaternoCliente,String apellidoMaternoCliente,int telefonoCliente,String correo,int tarjetaDeCredito) {
+    public Cliente(int idCliente,String nombreCliente,String apellidoPaternoCliente,String apellidoMaternoCliente,double telefonoCliente,String correo,double tarjetaDeCredito) {
         
         this.idCliente = idCliente;
         this.nombreCliente = nombreCliente;
@@ -194,7 +194,7 @@ public class Cliente {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_cliente = " + this.idCliente + ");");
+        cadena = cadena.concat("DELETE FROM cliente WHERE id_cliente = " + this.idCliente + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

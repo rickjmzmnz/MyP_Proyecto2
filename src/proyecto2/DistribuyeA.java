@@ -19,8 +19,8 @@ public class DistribuyeA {
 
     public DistribuyeA(int idMarcaDistribuyeA,int idDistribuidorDistribuyeA) {
 
-        idMarcaDistribuyeA = this.idMarcaDistribuyeA;
-        idDistribuidorDistribuyeA = this.idDistribuidorDistribuyeA;
+        this.idMarcaDistribuyeA = idMarcaDistribuyeA;
+        this.idDistribuidorDistribuyeA = idDistribuidorDistribuyeA;
         
     }
     

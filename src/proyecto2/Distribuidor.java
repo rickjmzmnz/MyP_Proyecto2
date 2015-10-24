@@ -108,7 +108,7 @@ public class Distribuidor {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_distribuidor = " + this.idDistribuidor + ");");
+        cadena = cadena.concat("DELETE FROM distribuidor WHERE id_distribuidor = " + this.idDistribuidor + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

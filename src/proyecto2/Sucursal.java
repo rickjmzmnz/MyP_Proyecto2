@@ -15,7 +15,7 @@ public class Sucursal {
     
     private int idSucursal;
     private String nombreSucursal;
-    private int telefonoSucursal;
+    private double telefonoSucursal;
     private double balance;
     
     /**
@@ -25,7 +25,7 @@ public class Sucursal {
      * @param telefonoSucursal
      * @param balance 
      */
-    public Sucursal(int idSucursal,String nombreSucursal,int telefonoSucursal,double balance) {
+    public Sucursal(int idSucursal,String nombreSucursal,double telefonoSucursal,double balance) {
         
         this.idSucursal = idSucursal;
         this.nombreSucursal = nombreSucursal;
@@ -60,7 +60,7 @@ public class Sucursal {
         String cadena = "";
         cadena = cadena.concat("INSERT INTO sucursal (id_sucursal,nombre_sucursal,telefono_sucursal,balance) "
                 + "VALUES (" + this.idSucursal + ",'" + this.nombreSucursal + "'," + this.telefonoSucursal + "," + this.balance + ");");
-        declaracion.executeLargeUpdate(cadena);
+        declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
         Conexion.cerrar();
@@ -130,7 +130,7 @@ public class Sucursal {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_sucursal = " + this.idSucursal + ");");
+        cadena = cadena.concat("DELETE FROM sucursal WHERE id_sucursal = " + this.idSucursal + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();

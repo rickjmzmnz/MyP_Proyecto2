@@ -7,11 +7,113 @@ deuda double,
 PRIMARY KEY(id_distribuidor)
 );
 
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (1,"Sociis Natoque Penatibus LLC",8739);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (2,"Pede Incorporated",3238);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (3,"Vitae Semper Foundation",3449);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (4,"Integer Urna Vivamus Foundation",7987);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (5,"Eget Laoreet Foundation",2375);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (6,"Non PC",5287);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (7,"Laoreet Libero Et Limited",7145);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (8,"Semper PC",5526);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (9,"Ut Foundation",3527);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (10,"Sem Egestas Consulting",9114);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (11,"Risus Donec LLP",9);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (12,"Dui Cum Sociis Company",253);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (13,"Diam Nunc Corp.",4802);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (14,"Tincidunt Congue Limited",2389);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (15,"Et Euismod Corp.",9642);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (16,"Enim Gravida LLP",9754);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (17,"Tellus Nunc Ltd",6708);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (18,"Praesent Eu Associates",9367);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (19,"Duis Corporation",5761);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (20,"Ultrices Inc.",7040);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (21,"Mus Proin LLP",952);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (22,"Neque PC",4147);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (23,"Arcu Ac Orci Industries",9084);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (24,"Volutpat Nulla Limited",8032);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (25,"Etiam Laoreet Corp.",7790);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (26,"Eget Corporation",7138);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (27,"Eget Metus Foundation",3024);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (28,"Gravida LLP",9697);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (29,"Mauris Industries",2895);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (30,"Dictum Mi Ac Corp.",6009);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (31,"Sed Neque Sed Corp.",2334);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (32,"Erat Eget Ipsum Institute",6843);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (33,"Consequat Company",6860);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (34,"Dolor Nulla Semper LLC",2811);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (35,"Ornare Foundation",4215);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (36,"Sit Amet Consectetuer Inc.",1779);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (37,"Magna A Neque Company",2606);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (38,"Ac Corp.",6428);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (39,"Arcu Institute",7370);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (40,"Curabitur Vel Industries",2443);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (41,"Morbi Associates",4136);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (42,"Mi Ac Mattis Consulting",4813);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (43,"Auctor LLC",758);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (44,"Vel Nisl Quisque Corporation",1118);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (45,"Sagittis Lobortis Institute",2482);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (46,"Gravida Mauris Consulting",643);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (47,"Gravida LLC",9269);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (48,"Egestas Nunc Sed Ltd",5151);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (49,"Dui Industries",4140);
+INSERT INTO distribuidor (id_distribuidor,nombre_distribuidor,deuda) VALUES (50,"Orci Corp.",8334);
+
 CREATE TABLE marca(
 id_marca integer,
 nombre_marca varchar(30),
 PRIMARY KEY(id_marca)
 );
+
+INSERT INTO marca (id_marca,nombre_marca) VALUES (1,"Sagittis Lobortis Mauris LLC");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (2,"Ultricies Dignissim Lacus LLP");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (3,"Augue Scelerisque LLC");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (4,"Eu LLP");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (5,"Magna Nam Ligula Company");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (6,"Donec Sollicitudin Adipiscing Limited");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (7,"Amet Risus Donec Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (8,"Penatibus Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (9,"Nec Consulting");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (10,"Ligula Aliquam Erat Limited");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (11,"Elementum Lorem Ut Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (12,"Mattis Semper Associates");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (13,"Adipiscing Elit Curabitur Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (14,"Leo Cras Vehicula Industries");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (15,"Vitae Industries");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (16,"Arcu Vivamus Corp.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (17,"Mauris A Nunc Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (18,"Sed Nec Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (19,"Netus Industries");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (20,"Faucibus Ut Nulla Consulting");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (21,"Consequat Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (22,"Donec Institute");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (23,"Arcu Eu Associates");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (24,"Velit Eget Institute");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (25,"Consectetuer Adipiscing PC");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (26,"Quisque Limited");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (27,"At Libero Morbi Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (28,"Est Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (29,"Sed Id Risus Incorporated");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (30,"Non Massa Non Limited");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (31,"Ut Dolor Dapibus Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (32,"Egestas Lacinia Sed Associates");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (33,"Nunc Sollicitudin Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (34,"Nec Urna Et Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (35,"Etiam Vestibulum Massa Corp.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (36,"Fames Ac Turpis PC");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (37,"At Auctor Ullamcorper Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (38,"At Lacus Quisque Company");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (39,"Cursus Diam At Institute");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (40,"Pede Consulting");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (41,"Dui Limited");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (42,"Non Lorem Associates");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (43,"Non Arcu Vivamus Inc.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (44,"Est Ac Corporation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (45,"Aliquet Metus Company");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (46,"Quis Corp.");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (47,"Faucibus Morbi Consulting");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (48,"Ornare Fusce Mollis Institute");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (49,"Massa Vestibulum Accumsan Foundation");
+INSERT INTO marca (id_marca,nombre_marca) VALUES (50,"Vitae Aliquet Nec Ltd");
 
 CREATE TABLE juguete(
 codigo_de_barras integer,
@@ -21,6 +123,57 @@ clasificacion integer,
 PRIMARY KEY(codigo_de_barras)
 );
 
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (1,"Transformer",807,18);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (2,"Ultron",821,16);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (3,"Barbie Doctora",451,4);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (4,"LEGO Marvel",837,10);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (5,"LEGO DC Comics",949,2);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (6,"Cocinita",516,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (7,"Casa de muñecas",972,16);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (8,"Patineta voladora",558,7);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (9,"Micro hornito",932,1);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (10,"JENGA BOOM",460,19);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (11,"Plastilina playdoh",112,4);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (12,"Carros",241,20);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (13,"Super yoyo",696,16);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (14,"Figuras de accion coleccion",901,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (15,"Cartas magicas",496,8);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (16,"Super cubo magico",875,5);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (17,"Carro control remoto",289,15);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (18,"Dados",10,18);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (19,"Diana",145,7);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (20,"Pistola de agua",337,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (21,"Turista",469,20);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (22,"UNO robot",838,7);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (23,"Bebe magico",601,7);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (24,"Hombre de accion",475,19);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (25,"Luchador",138,18);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (26,"Lona para luchadores",548,1);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (27,"Matatena espacial",535,19);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (28,"Dron",947,7);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (29,"Pizarron magico",7,7);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (30,"Pluma invicible",535,18);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (31,"YOYO",180,15);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (32,"Vaquero",319,5);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (33,"Dinosaurio",228,1);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (34,"Coleccion dinosaurios",578,6);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (35,"Balero",111,1);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (36,"Balero del chavo",622,4);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (37,"Maquilla de muñecas",791,20);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (38,"Guitarra",464,3);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (39,"Matatena",56,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (40,"Tenis veloces",760,11);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (41,"Morfo",623,5);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (42,"Power Ranger",646,10);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (43,"Hombre de acero",839,3);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (44,"Robot destructor",882,1);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (45,"Consola basica de juegos",964,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (46,"Palillos chinos",160,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (47,"Ajedrez medieval",661,13);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (48,"Castillo",894,4);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (49,"Diadema de princesa",140,12);
+INSERT INTO juguete (codigo_de_barras,nombre_juguete,precio,clasificacion) VALUES (50,"Loteria",30,6);
+
 CREATE TABLE pedido(
 id_pedido integer,
 numero_articulos integer,
@@ -29,16 +182,118 @@ fecha_pedido timestamp,
 PRIMARY KEY(id_pedido)
 );
 
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (1,237,6867,"09/25/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (2,3,2538,"07/12/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (3,320,1833,"10/16/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (4,271,9746,"05/04/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (5,452,4000,"10/13/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (6,288,8393,"01/13/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (7,333,3169,"06/26/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (8,59,3490,"01/05/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (9,460,2692,"03/02/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (10,483,2449,"12/02/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (11,92,2454,"10/18/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (12,42,9234,"10/21/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (13,128,3523,"07/21/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (14,120,8384,"05/20/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (15,441,6196,"10/29/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (16,97,6580,"12/25/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (17,192,7289,"01/09/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (18,143,8063,"03/13/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (19,321,8682,"03/03/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (20,236,3180,"04/15/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (21,500,5882,"08/14/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (22,123,192,"10/07/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (23,25,8074,"12/26/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (24,234,7538,"08/25/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (25,142,1666,"11/16/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (26,244,402,"09/11/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (27,91,7890,"05/18/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (28,73,9231,"12/15/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (29,43,8936,"10/01/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (30,347,6769,"05/19/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (31,379,7587,"03/06/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (32,287,339,"08/25/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (33,438,7886,"08/25/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (34,130,4806,"01/29/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (35,296,8230,"01/08/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (36,38,9714,"04/15/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (37,423,1758,"05/12/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (38,184,6445,"05/25/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (39,236,9377,"09/07/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (40,423,9970,"04/18/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (41,111,5961,"07/14/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (42,414,9563,"09/20/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (43,382,2374,"12/02/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (44,44,1078,"05/22/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (45,174,9731,"11/24/14");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (46,368,1451,"09/03/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (47,495,6663,"09/05/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (48,416,1299,"06/25/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (49,83,733,"07/16/15");
+INSERT INTO pedido (id_pedido,numero_articulos,total,fecha_pedido) VALUES (50,269,2848,"09/08/15");
+
 CREATE TABLE cliente(
 id_cliente integer,
 nombre_cliente varchar(30),
 apellido_paterno_cliente varchar(30),
 apellido_materno_cliente varchar(30),
-telefono_cliente integer,
+telefono_cliente double,
 correo varchar(50),
-tarjeta_de_credito integer,
+tarjeta_de_credito double,
 PRIMARY KEY(id_cliente)
 );
+
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (1,"Yuli","Constance Pate","Clio Knight",5521192766,"bibendum@odioauctor.com","5159471787502981");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (2,"Hop","Whitney Hawkins","Brennan Vaughn",5561726364,"velit.Quisque@dolorDonec.com","5399821015773349");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (3,"Cruz","Ginger Hurley","Tad Mayer",5548295291,"est@et.org","5328305607181972");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (4,"Emily","Justina Downs","Fiona Lynn",5554332818,"velit@fermentum.com","5110094101782885");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (5,"Joy","Janna Charles","Hayden Brady",5540180617,"massa.non@ipsumsodales.org","5391859996751886");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (6,"Uriah","Ina Santos","Raya Reilly",5599469448,"est.Mauris@convallisest.ca","346212463865051");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (7,"Clementine","Lacy Huffman","Cheyenne Spence",5515836876,"et.nunc.Quisque@PhasellusornareFusce.net","376334269732235");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (8,"Uma","Hasad Levy","Ishmael Elliott",5589141095,"enim@Donec.edu","348492484439169");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (9,"Keiko","Camden Mitchell","Harding Stephenson",5540905186,"Vivamus.rhoncus.Donec@magnisdisparturient.net","379845357046464");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (10,"Aquila","Medge Davidson","Wynter Farrell",5507500182,"dui.augue.eu@parturientmontesnascetur.co.uk","5183818925651726");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (11,"Scarlett","Stuart Davidson","Leah Oconnor",5550894460,"fringilla.porttitor@atortor.org","4624023289652543");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (12,"Ifeoma","Yuli Gutierrez","Guy Bridges",5520278403,"eu@tincidunt.edu","5341225246712564");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (13,"Tate","Juliet Joyce","Lucius Tran",5538852926,"pretium@mi.net","375160919348248");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (14,"Emma","Diana Villarreal","Ingrid Ewing",5582233576,"ante@Donec.ca","4536794152716176");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (15,"Garrison","Ulric Mckee","Iliana Hunter",5567743006,"Aenean.euismod@vulputate.edu","4734756768774246");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (16,"Cullen","Igor Bush","Odysseus Baird",5567128971,"nostra.per.inceptos@felis.com","348273299423040");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (17,"Branden","Dakota Stuart","Nomlanga Ray",5557592686,"velit.Cras@eu.ca","5342699680016370");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (18,"Callie","Idola Valdez","Wyoming Santana",5596097123,"Phasellus.vitae@aauctor.com","4943344643618915");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (19,"Ebony","Kenneth Montoya","Laurel Conrad",5543326028,"est@vitae.ca","5393132347231735");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (20,"Chanda","Ulla Oneal","Haviva Vaughan",5583450640,"ad@maurisutmi.ca","374816920128654");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (21,"Lee","Donna Riggs","Jada Burnett",5594810747,"lacinia.orci@per.org","5341791644305927");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (22,"Kiayada","Kareem Jimenez","Isaac Cunningham",5509998557,"mi@acfacilisis.net","5336519599333409");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (23,"Paki","Reagan Wood","Laurel Lewis",5529573096,"felis@Maurisvel.ca","348365621333945");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (24,"Rhea","Serena Barr","Germane Brady",5524053098,"fringilla@elitdictum.edu","4945257741771636");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (25,"Nita","Inez Cole","Isabella Dickson",5574839879,"est.Nunc@nequeNullamnisl.org","5149554631519134");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (26,"Colby","Adara Shields","Kaitlin Sawyer",5544194111,"tincidunt.aliquam@nonummyFuscefermentum.co.uk","5111447436618617");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (27,"Willa","Vielka Sampson","Timon Mcbride",5566295859,"et@malesuada.com","4342591062048454");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (28,"Tara","Fleur Mccullough","Bryar Martin",5549252141,"tellus.id@vulputate.edu","5110447950949890");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (29,"Naida","Dacey Walters","Mariko Hughes",5567186885,"non.magna.Nam@amet.ca","374285308573392");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (30,"Kylynn","Preston Lamb","Virginia Goodman",5564160568,"Curabitur.massa@ipsum.edu","5233332183090967");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (31,"Cade","Herman Shaffer","Gemma Raymond",5542022077,"Aenean.sed@tincidunt.com","346414366457143");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (32,"Kylee","Oscar Powers","Dakota Welch",5577071000,"Nam.consequat.dolor@commodo.org","5192324873236930");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (33,"Orlando","Preston Ball","Veda Bryan",5516087526,"leo@Morbi.com","373315319886431");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (34,"Leo","Anjolie Rosales","Matthew Blevins",5517891565,"vestibulum.massa.rutrum@erat.co.uk","5182449271753436");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (35,"Keely","Aurora Gibson","Marcia Burgess",5572035502,"volutpat.nunc@Sed.co.uk","4924189750198277");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (36,"Whoopi","Kane Conway","Maile Gregory",5594439228,"facilisis@tristiquesenectus.edu","5125013195616190");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (37,"Ivor","Rahim Wong","Mariam Velez",5534040588,"ornare.egestas@molestieSed.ca","5344573910403993");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (38,"Chelsea","Dana Walton","Chantale Carpenter",5570217077,"dui.quis@sedorci.ca","345576167238418");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (39,"Demetrius","Evelyn Maynard","Caldwell Abbott",5570266599,"non.quam.Pellentesque@molestiein.org","379993804004975");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (40,"Hyatt","Bree Ortega","Walter Vincent",5507198743,"ornare@congue.co.uk","5343027480868623");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (41,"Chanda","Tanisha Wade","Richard Watkins",5590820962,"molestie.tortor.nibh@eu.edu","343958059803580");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (42,"Reagan","Illana Dodson","Kiayada Wolf",5585021780,"Aliquam.nisl.Nulla@porttitor.co.uk","5162340369015004");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (43,"Ulysses","Ora Mendez","Medge Burns",5514549849,"ligula.Nullam@ac.edu","347425272758118");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (44,"Medge","Rosalyn Dawson","Roary Holcomb",5537883691,"fermentum.risus@ultricies.ca","378118979151820");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (45,"Eliana","Gregory Sweeney","Daniel Lucas",5547867139,"venenatis@nisi.ca","371601978428662");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (46,"Octavia","Dahlia Lawrence","Hadassah Chaney",5589694811,"non.dui.nec@orciluctuset.net","344772840445861");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (47,"Alma","Savannah Rollins","Carl Jennings",5535599406,"luctus.et.ultrices@sit.org","4639227857906376");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (48,"Yuri","Chadwick Carson","Shelley Stone",5546900244,"libero.et@dictumcursusNunc.ca","4487194643029940");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (49,"Neville","Perry Brooks","Wesley Allison",5564693445,"Proin.mi.Aliquam@seddolor.edu","374206286882054");
+INSERT INTO cliente (id_cliente,nombre_cliente,apellido_paterno_cliente,apellido_materno_cliente,telefono_cliente,correo,tarjeta_de_credito) VALUES (50,"Joelle","Tana Meadows","Odessa Drake",5534994940,"mauris.rhoncus.id@eget.edu","345705513302230");
 
 CREATE TABLE direccion_cliente(
 calle_cliente varchar(50),

@@ -81,8 +81,8 @@ public class Empleado {
         Statement declaracion = conexion.createStatement();
         String cadena = "";
         cadena = cadena.concat("INSERT INTO empleado (id_empleado,nombre_empleado,apellido_paterno_empleado,apellido_materno_empleado,fecha_de_nacimiento,fecha_de_ingreso,posicion) "
-                + "VALUES (" + this.idEmpleado + ",'" + this.nombreEmpleado + "','" + this.apellidoPaternoEmpleado + "','" + this.apellidoMaternoEmpleado + "'," + this.mesN + "/" + this.diaN + "/" + this.anyoN + "," + this.mesI + "/" + this.diaI + "/" + this.anyoI + ",'" + this.posicion + "');");
-        declaracion.executeLargeUpdate(cadena);
+                + "VALUES (" + this.idEmpleado + ",'" + this.nombreEmpleado + "','" + this.apellidoPaternoEmpleado + "','" + this.apellidoMaternoEmpleado + "','" + this.mesN + "/" + this.diaN + "/" + this.anyoN + "','" + this.mesI + "/" + this.diaI + "/" + this.anyoI + "','" + this.posicion + "');");
+        declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
         Conexion.cerrar();
@@ -210,7 +210,7 @@ public class Empleado {
         Connection conexion = Conexion.abrir();
         Statement declaracion = conexion.createStatement();
         String cadena = "";
-        cadena = cadena.concat("DELETE FROM marca WHERE id_empleado = " + this.idEmpleado + ");");
+        cadena = cadena.concat("DELETE FROM empleado WHERE id_empleado = " + this.idEmpleado + ";");
         declaracion.executeUpdate(cadena);
         declaracion.close();
         //conexion.commit();
